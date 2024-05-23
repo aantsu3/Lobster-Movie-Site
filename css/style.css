@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #efede1;
+    font-family: 'Rubik Mono One', monospace;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    position: absolute;
+    top: 13%;
+    left: 16%;
+}
+
+.top {
+    position: absolute;
+    font-size: 15px;
+    top: 3%;
+}
+
+.down {
+    position: absolute;
+    color: gray;
+    font-size: 14px;
+    top: 6%;
+}
+
+.actors {
+    position: absolute;
+    z-index: 1;
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 13px;
+    text-align: center;
+    top: 30%;
+}
+
+.title {
+    position: absolute;
+    z-index: 1;
+    font-family: 'Rubik Mono One', monospace;
+    font-size: 50px;
+    text-align: center;
+    top: 72%;
+    letter-spacing: .2rem;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 120vh;
+}
+
+.abouttext {
+    text-align: center;
+    font-size: 20px;
+}
+
+.hand1,
+.hand2 {
+    width: 50%;
+    height: 200px;
+}
+
+.about {
+    display: flex;
+    width: 1021px;
+}
+
+.abouttitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: gray;
+
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.mainchartitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: gray;
+
+}
+
+.mainchar {
+    display: flex;
+    width: 1012px;
+}
+
+.man1 {
+    width: 30%;
+    height: 250px;
+}
+
+.woman1 {
+    width: 25%;
+    height: 300px;
+}
+
+.main1 {
+    width: 658px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main2 {
+    width: 600px;
+    margin-top: 73px;
+    text-align: center;
+}
+
+.nav {
+    position: fixed;
+    bottom: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    right: 0;
+    z-index: 999;
+    padding-right: 16px;
+    text-align: right;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav__li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: gray;
+    transition: 0.24s;
+}
+
+.nav__li_active a {
+    font-weight: 700;
+}
+
+.nav_light a {
+    color: #fdfffc;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.contentflex p {
+    text-align: center;
+    background: rgb(255, 255, 255);
+    font-size: 12px;
+    color: gray;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
